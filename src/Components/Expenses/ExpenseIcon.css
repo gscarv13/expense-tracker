@@ -1,0 +1,10 @@
+.expense-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(19,53,161,1) 0%, rgba(0,173,232,1) 100%);
+}
