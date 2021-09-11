@@ -2,13 +2,14 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import './Balance.css';
+import Card from '../UI/Card';
 
 const Balance = ({ expenses }) => {
   const totalIncome = 6500;
   const totalExpense = Math.round(expenses.reduce((sum, expense) => sum + expense.amount, 0));
   const balance = totalIncome - totalExpense;
   return (
-    <div className="balance">
+    <Card className="balance">
       <div>
         <p>total balance</p>
         <p className="balance__total">$ {balance}</p>
@@ -32,7 +33,7 @@ const Balance = ({ expenses }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 

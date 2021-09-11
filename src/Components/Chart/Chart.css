@@ -1,9 +1,23 @@
 .chart {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 12px;
-  background-color: #f8dfff;
   text-align: center;
   display: flex;
   justify-content: space-around;
-  height: 10rem;
+  height: 18rem;
+  width: 100%;
+
+}
+
+.chart-container {
+  color: #2e435d;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: #fff;
+  width: 30rem;
+}
+
+.chart-container p {
+  margin-top: 10px;
+  font-size: 0.9rem;
 }

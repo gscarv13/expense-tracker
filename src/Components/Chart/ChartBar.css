@@ -7,10 +7,9 @@
 
 .chart-bar__inner {
   height: 100%;
-  width: 100%;
-  border: 1px solid #313131;
+  width: 0.5rem;
   border-radius: 12px;
-  background-color: #c3b4f3;
+  background-color: #ebecef;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -18,13 +17,16 @@
 }
 
 .chart-bar__fill {
-  background-color: #4826b9;
+  background: linear-gradient(110.93deg, #24ADE3 10.94%, #CF69F7 50%, #FE946A 89.06%);
+  border-radius: 13px;
   width: 100%;
   transition: all 0.3s ease-out;
 }
 
 .chart-bar__label {
   font-weight: bold;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   text-align: center;
+  margin-top: 15px;
+  transform: rotate(45deg);
 }

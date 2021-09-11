@@ -13,7 +13,7 @@ const ExpenseItem = ({
   bgColor,
 }) => (
   <li>
-    <Card className="expense-item">
+    <div className="expense-item">
       <ExpenseIcon iconName={iconName} bgColor={bgColor} />
       <div className="expense-item__description">
         <h2>{title}</h2>
@@ -22,7 +22,7 @@ const ExpenseItem = ({
         <p className="expense-item__price">{`$ ${amount}`}</p>
         <ExpenseDate date={date} />
       </div>
-    </Card>
+    </div>
   </li>
 );
 

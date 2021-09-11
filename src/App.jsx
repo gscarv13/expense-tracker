@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <GridContainer>
         <NewExpense saveSubmittedExpense={saveExpenseHandler} />
-        <Balance expenses={expenses}/>
+        <Balance expenses={expenses} />
         <Expenses items={expenses} />
       </GridContainer>
     </div>

@@ -13,14 +13,16 @@ function Expenses({ items }) {
   const filteredExpenses = items.filter((expense) => expense.date.getFullYear().toString() === selectedYear);
 
   return (
-    <Card className="expenses">
+    <>
       <ExpensesFilter
         selected={selectedYear}
         onChangeFilter={handleOnChangeFilter}
       />
       <ExpensesChart filteredExpenses={filteredExpenses} />
-      <ExpensesList filteredExpenses={filteredExpenses} />
-    </Card>
+      <div className="expenses">
+        <ExpensesList filteredExpenses={filteredExpenses} />
+      </div>
+    </>
   );
 }
 
