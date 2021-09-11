@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ExpenseList.css';
 import ExpenseItem from './ExpenseItem';
+import { iconColors, iconNames } from '../../Constants/iconsInfo';
 
 const ExpensesList = ({ filteredExpenses }) => {
   if (filteredExpenses.length === 0) {
@@ -17,6 +18,8 @@ const ExpensesList = ({ filteredExpenses }) => {
             title={item.title}
             amount={item.amount}
             date={item.date}
+            iconName={iconNames[item.category]}
+            bgColor={iconColors[item.category]}
           />
         ))
       }
