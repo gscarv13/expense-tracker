@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CharBar from './ChartBar';
 import './Chart.css';
-import PropTypes from 'prop-types';
 
 const Chart = ({ dataPoints }) => {
   const dataPointsValues = dataPoints.map((dtp) => dtp.value);

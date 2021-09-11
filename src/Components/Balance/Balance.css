@@ -1,0 +1,47 @@
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background: linear-gradient(110.93deg, #24ADE3 10.94%, #CF69F7 50%, #FE946A 89.06%);
+  border-radius: 20px;
+  max-width: 28rem;
+  height: 15rem;
+  padding: 3rem;
+  margin: 2rem auto;
+  text-transform: capitalize;
+}
+
+.balance__total {
+
+  font-size: 3rem;
+}
+
+.balance__details {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.balance__change {
+  display: flex;
+  align-items: center;
+}
+
+.balance__change .iconify {
+  margin-right: 0.5rem;
+}
+
+.balance__change p {
+  text-align: left;
+}
+
+.iconify {
+  width: 2rem;
+  height: 2rem;
+  padding: 8px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.3);
+}

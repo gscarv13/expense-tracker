@@ -1,0 +1,13 @@
+.expense-filter {
+  text-transform: uppercase;
+  color: #98abc2;
+  font-size: 0.8rem;
+}
+
+.expense-filter select {
+  background-color: #fff;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  margin-left: 1rem;
+}
