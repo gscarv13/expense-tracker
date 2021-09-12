@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ExpenseForm.css';
+import { Icon } from '@iconify/react';
 
 const ExpenseForm = ({ saveSubmittedExpense, hideForm }) => {
   const initialState = {
@@ -27,32 +28,43 @@ const ExpenseForm = ({ saveSubmittedExpense, hideForm }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="new-expense__controls">
-        <div className="new-expense__control">
-          <label htmlFor="title">
-            Title
-            <input id="title" type="text" value={formInput.title} onChange={handleInputChange} />
-          </label>
+    <div className="new-expense__container">
+      <button className="new-expense__close" type="button" onClick={() => hideForm((open) => !open)}>
+        <Icon icon="whh:x" />
+      </button>
+      <form onSubmit={submitHandler}>
+        <div className="new-expense__amount">
+          <span className="money">$</span>
+          <input id="amount" type="number" min="0.01" step="0.01" onChange={handleInputChange} value={formInput.amount} />
         </div>
-        <div className="new-expense__control">
-          <label htmlFor="amount">
-            Amount
-            <input id="amount" type="number" min="0.01" step="0.01" onChange={handleInputChange} value={formInput.amount} />
-          </label>
+        <div className="new-expense__controls">
+          <div className="new-expense__control">
+            <Icon icon="whh:stickynote" />
+            <input
+              id="title"
+              type="text"
+              value={formInput.title}
+              onChange={handleInputChange}
+              placeholder="Notes"
+              required
+            />
+          </div>
+          <div className="new-expense__control">
+            <Icon icon="whh:notesdatealt" />
+            <input
+              id="date"
+              type="date"
+              min="2021-01-01"
+              onChange={handleInputChange}
+              value={formInput.date}
+            />
+          </div>
         </div>
-        <div className="new-expense__control">
-          <label htmlFor="date">
-            Date
-            <input id="date" type="date" min="2021-01-01" onChange={handleInputChange} value={formInput.date} />
-          </label>
+        <div className="new-expense__actions">
+          <button className="form-button" type="submit">Add Expense</button>
         </div>
-      </div>
-      <div className="new-expense__actions">
-        <button type="button" onClick={() => hideForm((open) => !open)}>Cancel</button>
-        <button type="submit">Add Expense</button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ const NewExpense = ({ saveSubmittedExpense }) => {
         openForm
           ? <ExpenseForm saveSubmittedExpense={saveSubmittedExpense} hideForm={setOpenForm} />
           : (
-            <button type="button" onClick={() => setOpenForm((open) => !open)}>
+            <button className="form-button" type="button" onClick={() => setOpenForm((open) => !open)}>
               Add New Expense
             </button>
           )
