@@ -1,0 +1,20 @@
+rescript = 1
+g_finger := /home/gscarv13/Microverse/React/expense-tracker/node_modules/@rescript/react/lib/ocaml/install.stamp
+rule astj
+  command = /home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/linux/bsc.exe  -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/linux/bsb_helper.exe -hash 94f8c15450d40c9b353338751582ae09 $in
+  restat = 1
+o src/App.d : deps src/App.ast
+rule mij
+  command = /home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/linux/bsc.exe -I src/Components/Expenses -I src/Components/UI -I src/Components/NewExpense -I src/Components/Chart -I src/Components/Balance -I src/Components -I src/Constants -I src/old -I src -I /home/gscarv13/Microverse/React/expense-tracker/node_modules/@rescript/react/lib/ocaml   -bs-package-name expense-tracker -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
+o src/index.ast : astj ../../src/index.res
+o src/index.d : deps src/index.ast
+o src/index.cmj src/index.cmi ../../src/index.bs.js : mij src/index.ast
+o src/Components/UI/GridContainer.ast : astj ../../src/Components/UI/GridContainer.res
+o src/Components/UI/GridContainer.d : deps src/Components/UI/GridContainer.ast
+o src/Components/UI/GridContainer.cmj src/Components/UI/GridContainer.cmi ../../src/Components/UI/GridContainer.bs.js : mij src/Components/UI/GridContainer.ast

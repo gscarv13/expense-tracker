@@ -1,0 +1,13 @@
+
+####{BSB GENERATED: NO EDIT
+FLG -ppx '/home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/linux/bsc.exe -as-ppx -bs-jsx 3'
+S /home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/lib/ocaml
+B /home/gscarv13/Microverse/React/expense-tracker/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /home/gscarv13/Microverse/React/expense-tracker/node_modules/@rescript/react/lib/ocaml
+B /home/gscarv13/Microverse/React/expense-tracker/node_modules/@rescript/react/lib/ocaml
+S src
+B lib/bs/src
+S src/Components/UI
+B lib/bs/src/Components/UI
+####BSB GENERATED: NO EDIT}

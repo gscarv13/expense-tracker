@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './App.css';
-import demoExpenses from './Constants/demoExpenses';
-import Expenses from './Components/Expenses/Expenses';
-import NewExpense from './Components/NewExpense/NewExpense';
-import GridContainer from './Components/UI/GridContainer';
-import Balance from './Components/Balance/Balance';
+import '../App.css';
+import demoExpenses from '../Constants/demoExpenses';
+import Expenses from '../Components/Expenses/Expenses';
+import NewExpense from '../Components/NewExpense/NewExpense';
+import GridContainer from '../Components/UI/GridContainer';
+import Balance from '../Components/Balance/Balance';
 
 function App() {
   const [expenses, setExpenses] = useState(demoExpenses);

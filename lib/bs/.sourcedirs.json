@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" , "src/old" , "src/Constants" , "src/Components" , "src/Components/Balance" , "src/Components/Chart" , "src/Components/NewExpense" , "src/Components/UI" , "src/Components/Expenses" ] , "pkgs" : [ [ "@rescript/react" , "/home/gscarv13/Microverse/React/expense-tracker/node_modules/@rescript/react" ] ] , "generated" : [] }
