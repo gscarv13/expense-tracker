@@ -1,4 +1,4 @@
 @react.component
 let make = () => {
-  <div className="App"> {React.string("Helloww Worllld")} </div>
+  <div className="App"> <GridContainer classes=""> <NewExpense /> </GridContainer> </div>
 }
