@@ -1,16 +1,26 @@
 {
   "name": "expense-tracker",
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "re:build": "rescript",
+    "build:deps": "rescript build -with-deps",
+    "re:start": "rescript build -w",
+    "clean": "rescript clean -with-deps"
   },
+  "keywords": [
+    "rescript"
+  ],
   "dependencies": {
     "@iconify/react": "^3.0.1",
+    "@rescript/react": "^0.10.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "rescript": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.15.4",
