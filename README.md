@@ -6,6 +6,7 @@
 - [ ] Store Balances
 - [ ] Fix icon background color on ExpenseList component
 - [x] Update Expense form UI
+- [ ] (ReScript) Add proper type to IconName and iconColor
 
 ## Acknowledgments
 

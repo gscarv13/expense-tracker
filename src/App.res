@@ -1,4 +1,6 @@
 @react.component
 let make = () => {
-  <div className="App"> <GridContainer classes=""> <NewExpense /> </GridContainer> </div>
+  <div className="App">
+    <GridContainer classes=""> <NewExpense /> <Expenses /> </GridContainer>
+  </div>
 }
