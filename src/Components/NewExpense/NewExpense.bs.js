@@ -2,6 +2,7 @@
 
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as React from "react";
+import * as ExpenseForm from "./ExpenseForm.bs.js";
 
 import './NewExpense.css'
 ;
@@ -18,10 +19,7 @@ function NewExpense(Props) {
   };
   return React.createElement("div", {
               className: "new-expense"
-            }, match[0] ? React.createElement("form", undefined, React.createElement("input", {
-                        placeholder: "INPUT",
-                        type: "text"
-                      })) : React.createElement("button", {
+            }, match[0] ? React.createElement(ExpenseForm.make, {}) : React.createElement("button", {
                     className: "form-button",
                     type: "button",
                     onClick: onClick
