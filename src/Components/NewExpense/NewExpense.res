@@ -9,7 +9,7 @@ let make = () => {
   }
   <div className="new-expense">
     {openForm
-      ? <ExpenseForm />
+      ? <ExpenseForm displayForm={setOpenForm} />
       : <button className="form-button" type_="button" onClick>
           {"Add New Expense"->React.string}
         </button>}

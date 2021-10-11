@@ -2,7 +2,7 @@
 open Icon
 
 @react.component
-let make = () => {
+let make = (~displayForm) => {
   let (titleInput, setTitleInput) = React.useState(_ => "")
   let (dateInput, setDateInput) = React.useState(_ => "")
   let (amountInput, setAmountInput) = React.useState(_ => "0.01")
@@ -15,6 +15,7 @@ let make = () => {
     | "amount" => setAmountInput(targetValue)
     | "title" => setTitleInput(targetValue)
     | "date" => setDateInput(targetValue)
+    | _ => ()
     }
   }
 
@@ -34,7 +35,12 @@ let make = () => {
   }
 
   <div className="new-expense__container">
-    <button className="new-expense__close" type_="button"> <Icon icon="whh:x" /> </button>
+    <button
+      className="new-expense__close"
+      type_="button"
+      onClick={_ => displayForm(prevState => !prevState)}>
+      <Icon icon="whh:x" />
+    </button>
     <form onSubmit={submitHandler}>
       <div className="new-expense__amount">
         <span className="money"> {React.string("$")} </span>

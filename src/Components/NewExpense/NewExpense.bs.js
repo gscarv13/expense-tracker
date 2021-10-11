@@ -19,7 +19,9 @@ function NewExpense(Props) {
   };
   return React.createElement("div", {
               className: "new-expense"
-            }, match[0] ? React.createElement(ExpenseForm.make, {}) : React.createElement("button", {
+            }, match[0] ? React.createElement(ExpenseForm.make, {
+                    displayForm: setOpenForm
+                  }) : React.createElement("button", {
                     className: "form-button",
                     type: "button",
                     onClick: onClick
