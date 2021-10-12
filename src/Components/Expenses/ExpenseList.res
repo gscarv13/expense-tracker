@@ -9,6 +9,8 @@ type expenseItemType = {
   category: string,
 }
 
+open Icons.Info
+
 @react.component
 let make = (~filteredExpenses: array<expenseItemType>) => {
   let expenseList = filteredExpenses->Belt.Array.map(item => {
@@ -17,8 +19,8 @@ let make = (~filteredExpenses: array<expenseItemType>) => {
       title={item.title}
       amount={item.amount}
       date={item.date}
-      iconName={%raw("iconInfo.iconNames[item.category]")}
-      bgColor={%raw("iconInfo.iconColors[item.category]")}
+      iconName={Js.Dict.unsafeGet(iconClassNames, item.category)}
+      bgColor={Js.Dict.unsafeGet(iconColors, item.category)}
     />
   })
   <ul className="expenses-list"> {React.array(expenseList)} </ul>

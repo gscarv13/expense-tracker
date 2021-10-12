@@ -12,3 +12,7 @@ let make = (~text) => {
 // %%raw("import './NewExpense.css'")
 
 // Js.log("asd") <--  console log
+
+// To convert option<type> into type use Belt.Option.getExn()
+// eg: let maybeNull: option<string> = "asd"
+// Belt.Option.getExn(maybeNull) // => "asd" : string

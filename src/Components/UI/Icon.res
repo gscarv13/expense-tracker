@@ -5,7 +5,6 @@ module Icon = {
     ~onClick: 'c=?,
     ~width: string=?,
     ~height: string=?,
+    ~style: option<'a>=?,
   ) => React.element = "Icon"
 }
-
-//width="20" height="20"

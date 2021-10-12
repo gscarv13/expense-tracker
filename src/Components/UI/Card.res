@@ -1,7 +1,8 @@
-@module external styles: string => string = "./Card.css"
+%%raw("import './Card.css'")
 
 @react.component
-let make = (~classes, ~children) => {
-  let htmlClasses = `card ${classes}`
+let make = (~classes: option<string>=?, ~children) => {
+  let classesList = Belt.Option.getExn(classes)
+  let htmlClasses = `card ${classesList}`
   <div className={htmlClasses}> {children} </div>
 }
